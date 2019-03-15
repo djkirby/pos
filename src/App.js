@@ -29,7 +29,7 @@ const printTicket = ({ printerDevice, cardDetails, ticketNo }) => {
     "General Admission - $10",
     `Paid - **${cardNumber.substr(-4)}`,
     `Ticket No. ${ticketNo}`,
-    "\n\n\n\n\n\n"
+    "\n\n\n"
   ];
   console.log("ticket", messages);
   printerDevice.transferOut(1, encoder.encode(messages.join("\n")));
